@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant-Based Food Market Entry Strategy Report</title>
+    <!-- Tailwind CSS CDN for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js CDN for interactive charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7fafc; /* Light gray background */
+        }
+        .container {
+            max-width: 1200px;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 1rem; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        h1, h2, h3 {
+            color: #2d3748; /* Dark gray for headings */
+        }
+        .chart-container {
+            position: relative;
+            height: 300px; /* Fixed height for consistency */
+            margin-bottom: 1.5rem;
+        }
+        /* Custom Waffle Chart Styling */
+        .waffle-chart {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr); /* 10 columns for a 10x10 grid */
+            gap: 4px;
+            width: 200px; /* Fixed size for the waffle grid */
+            height: 200px;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        .waffle-square {
+            width: 100%;
+            height: 100%;
+            background-color: #e2e8f0; /* Default empty square color */
+            border-radius: 2px;
+        }
+        /* Colors for waffle chart segments */
+        .waffle-color-1 { background-color: #4CAF50; } /* Green */
+        .waffle-color-2 { background-color: #FFC107; } /* Amber */
+        .waffle-color-3 { background-color: #2196F3; } /* Blue */
+        .waffle-color-4 { background-color: #9C27B0; } /* Purple */
+
+        /* Legend for Waffle Chart */
+        .waffle-legend div {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        .waffle-legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body class="p-6">
+    <div class="container mx-auto">
+        <h1 class="text-4xl font-extrabold text-center mb-8">Plant-Based Food Market Entry Strategy Report</h1>
+
+        <div class="card">
+            <h2 class="text-2xl font-bold mb-4">I. Executive Summary</h2>
+            <p class="text-gray-700">
+                The global plant-based food market is growing, but U.S. retail shows a critical need for superior taste, texture, and price competitiveness. This report analyzes market size, consumer behavior, trends, competition, and distribution to guide our market entry. Success hinges on delivering high-quality, affordable plant-based offerings, focusing on the flexitarian segment, clean labels, and strategic pricing and distribution channels to build long-term consumer loyalty.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2 class="text-2xl font-bold mb-4">II. Market Size & Growth Trajectory</h2>
+            <p class="text-gray-700 mb-6">
+                The plant-based food market presents a compelling growth narrative globally, though regional and category-specific trends reveal important nuances. Recent U.S. retail data indicates a market correction, emphasizing the need for robust product performance beyond initial values-driven interest.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">Global & U.S. Plant-Based Market Growth (USD Billions)</h3>
+                    <div class="chart-container">
+                        <canvas id="marketGrowthLineChart"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                        This line graph illustrates the historical and projected market size for the overall global and U.S. plant-based food markets, alongside key sub-categories like plant-based meat and dairy. Note the recent dip in U.S. retail figures for meat and dairy, contrasting with overall global growth.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">U.S. Plant-Based Market Growth by Sub-Category (Stacked Area)</h3>
+                    <div class="chart-container">
+                        <canvas id="marketGrowthStackedAreaChart"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                        This stacked area chart shows the proportional growth of key plant-based sub-categories within the U.S. market over time. It highlights the dominance of dairy alternatives and the evolving share of meat, yogurt, and other segments.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="text-2xl font-bold mb-4">III. Consumer Demographics & Preferences</h2>
+            <p class="text-gray-700 mb-6">
+                Understanding the plant-based consumer is paramount for effective market entry. This segment is diverse, driven by a mix of motivations and exhibiting distinct purchasing behaviors. The flexitarian segment is key for mass adoption.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">U.S. Plant-Based Consumer Segments</h3>
+                    <div class="chart-container">
+                        <canvas id="consumerSegmentsDoughnutChart"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                        This doughnut chart visualizes the estimated distribution of plant-based consumer segments in the U.S. population, highlighting the significant size of flexitarians and those who consume plant-based foods without strict adherence.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">Primary Motivations for Consuming Plant-Based Foods</h3>
+                    <div class="chart-container">
+                        <canvas id="motivationsDoughnutChart"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                        This doughnut chart illustrates the key drivers behind consumer adoption of plant-based foods. Health benefits consistently emerge as the top motivator, followed by environmental and animal welfare concerns.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">Preferred Plant-Based Protein Sources</h3>
+                    <div class="chart-container">
+                        <canvas id="proteinSourcesBarChart"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                        This bar chart shows consumers' preferred plant-based protein sources, indicating a strong preference for whole, less processed foods like nuts, seeds, and legumes, though soy and pea proteins also hold significant interest.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">Key Product Attributes Consumers Prioritize</h3>
+                    <div class="chart-container">
+                        <canvas id="productAttributesBarChart"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                        This bar chart ranks the most critical product attributes for plant-based consumers. Taste and texture are paramount, followed by nutritional value, clean label, and price competitiveness.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">Consumer Willingness to Pay vs. Price Premium & Consumer Base</h3>
+                    <div class="chart-container">
+                        <canvas id="willingnessToPayScatterPlot"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                        This bubble chart shows the relationship between perceived price premium (X-axis) and consumer willingness to pay (Y-axis) for different plant-based product types.
+                        <br>
+                        <strong>Bubble Size:</strong> The size of each bubble represents the relative size of its consumer base or market penetration (larger bubble = larger consumer base).
+                        <br>
+                        <strong>Bubble Color:</strong> Each color represents a distinct plant-based product type, as indicated in the legend below.
+                    </p>
+                </div>
+            </div>
+            <div class="text-center mt-6">
+                <h3 class="text-xl font-semibold mb-3">Infographic: U.S. Household Plant-Based Penetration & Repeat Purchase</h3>
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+                    <div class="flex items-center text-lg font-medium text-gray-800">
+                        <i class="fas fa-home text-green-500 text-3xl mr-3"></i>
+                        <span>59% U.S. Households purchased Plant-Based Foods in 2024</span>
+                    </div>
+                    <div class="flex items-center text-lg font-medium text-gray-800">
+                        <i class="fas fa-redo-alt text-blue-500 text-3xl mr-3"></i>
+                        <span>80% Overall Plant-Based Repeat Purchase Rate</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="text-2xl font-bold mb-4">IV. Product Trends & Innovation</h2>
+            <p class="text-gray-700 mb-6">
+                The plant-based food sector is a hotbed of innovation, constantly evolving to meet consumer demands for improved sensory experiences, diverse options, and enhanced nutritional profiles. This dynamic environment is shaping the next generation of plant-based products.
+            </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">Emerging Product Categories Innovation Focus</h3>
+                    <div class="flex flex-col items-center">
+                        <div id="waffleChartContainer" class="waffle-chart mb-4"></div>
+                        <div class="waffle-legend text-left">
+                            <div><div class="waffle-legend-color waffle-color-1"></div>Plant-Based Seafood (25%)</div>
+                            <div><div class="waffle-legend-color waffle-color-2"></div>Cultivated Meat (20%)</div>
+                            <div><div class="waffle-legend-color waffle-color-3"></div>Fermented Alt-Dairy (30%)</div>
+                            <div><div class="waffle-color-4"></div>Hybrid Products (25%)</div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-3">
+                        This "square pie chart" (waffle chart) illustrates the relative focus of innovation across key emerging plant-based product categories, highlighting areas with significant R&D and market potential.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">Competitive Positioning (Radar Chart)</h3>
+                    <div class="chart-container">
+                        <canvas id="competitiveRadarChart"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                        This radar chart compares leading plant-based brands across key attributes such as taste, texture, price competitiveness, innovation, sustainability, and brand recognition.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="text-2xl font-bold mb-4">V. Competitive Landscape</h2>
+            <p class="text-gray-700 mb-6">
+                The plant-based food market is characterized by a dynamic competitive landscape, featuring a mix of established food giants and agile niche startups. Understanding their strategies is crucial for effective market entry.
+            </p>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">Illustrative Plant-Based Market Share (U.S.)</h3>
+                    <div class="chart-container">
+                        <canvas id="marketShareBarChart"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                        This bar chart provides an illustrative overview of market share among key plant-based brands in the U.S., showcasing the presence of both independent startups and large corporate players.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">Comparative Pricing: Plant-Based vs. Conventional (Relative Price Index)</h3>
+                    <div class="chart-container">
+                        <canvas id="pricingComparisonBarChart"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                        This bar chart compares the relative pricing of selected plant-based products against their conventional counterparts, demonstrating the prevailing premium for plant-based alternatives.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="text-2xl font-bold mb-4">VI. Distribution Channels</h2>
+            <p class="text-gray-700 mb-6">
+                The effectiveness of a plant-based food market entry strategy is heavily reliant on a well-defined distribution approach that leverages both traditional and emerging channels.
+            </p>
+            <h3 class="text-xl font-semibold mb-3">U.S. Plant-Based Food Sales Distribution by Channel</h3>
+            <div class="chart-container">
+                <canvas id="distributionStackedBarChart"></canvas>
+            </div>
+            <p class="text-sm text-gray-600">
+                This stacked bar chart illustrates the breakdown of plant-based food sales across various U.S. retail and foodservice channels, highlighting the dominance of conventional grocery and the growing importance of online and QSR segments.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2 class="text-2xl font-bold mb-4">VII. Strategic Recommendations for Market Entry</h2>
+            <p class="text-gray-700 mb-4">
+                Based on the comprehensive analysis of market dynamics, consumer behavior, product trends, competitive strategies, and distribution channels, the following data-driven recommendations are provided for our plant-based market entry strategy.
+            </p>
+
+            <h3 class="text-xl font-semibold mb-2">Optimal Product Category: Plant-Based Yogurt</h3>
+            <p class="text-gray-700 mb-4">
+                We recommend focusing on **plant-based yogurt** for initial market entry. This category shows strong projected growth and a more stable retail performance compared to other plant-based segments, as seen in the **Market Size & Growth charts**. It aligns well with consumer familiarity and offers opportunities for innovative flavors and functional benefits like added protein.
+            </p>
+
+            <h3 class="text-xl font-semibold mb-2">Target Consumer Profile: The Health-Conscious Flexitarian</h3>
+            <p class="text-gray-700 mb-4">
+                Our ideal target consumer is the **health-conscious flexitarian**. This significant consumer segment, as highlighted in the **Consumer Segments chart**, actively seeks to reduce animal product consumption primarily for health reasons. They value products that offer competitive taste, texture, and nutritional benefits.
+            </p>
+
+            <h3 class="text-xl font-semibold mb-2">Key Product Attributes: Taste, Clean Label, and Functional Protein</h3>
+            <p class="text-gray-700 mb-4">
+                To succeed, our plant-based yogurt must prioritize **superior taste and texture**. Additionally, a **clean label** with recognizable ingredients and **functional protein benefits** are crucial attributes that resonate with our target consumers, as supported by data in the **Product Attributes chart**.
+            </p>
+
+            <h3 class="text-xl font-semibold mb-2">Pricing & Positioning Strategy: Competitive Premium with Value Communication</h3>
+            <p class="text-gray-700 mb-4">
+                We recommend a **competitive premium pricing strategy**. While consumers are price-sensitive, our target segment is often willing to pay a slight premium for high-quality products that align with their values, as shown in the **Consumer Willingness to Pay chart**. Our market positioning should emphasize "Delicious & Nutritious Plant-Based Indulgence" to highlight taste, health, and enjoyment.
+            </p>
+
+            <h3 class="text-xl font-semibold mb-2">Go-to-Market Approach: Hybrid Distribution with Digital-First Marketing</h3>
+            <p class="text-gray-700 mb-4">
+                A **hybrid distribution strategy** is key, combining mainstream retail, strategic foodservice partnerships, and a strong online presence. This approach ensures wide accessibility and opportunities for consumer trial, as illustrated by the **Distribution Channels chart**. Our marketing messages should focus on "Uncompromising Taste & Texture," "Fuel Your Day, Naturally," and "Your Go-To, Guilt-Free Indulgence" to capture consumer attention.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2 class="text-2xl font-bold mb-4">VIII. Conclusion</h2>
+            <p class="text-gray-700">
+                The plant-based food market is growing, but U.S. retail shows that product quality, taste, and price are key for long-term success. We recommend entering the plant-based yogurt category due to its growth and less saturated market. Success will depend on delivering exceptional taste and texture, a clean label with protein, competitive pricing, and a hybrid distribution and marketing strategy to reach health-conscious flexitarians.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Synthetic Data Generation based on the research report
+        const syntheticData = {
+            // Market Size & Growth
+            marketGrowth: {
+                years: [2020, 2021, 2022, 2023, 2024, 2025, 2030, 2035],
+                globalOverall: [40, 45, 50, 53, 57, 63, 100, 150], // Adjusted for longer term
+                usOverall: [6, 6.8, 7.5, 8.1, 7.8, 8.5, 15, 25], // Showing 2024 dip
+                globalMeat: [6, 7.5, 8.5, 9.2, 9.6, 11, 18, 22],
+                usMeat: [2.5, 2.8, 3.2, 3.0, 2.8, 3.5, 8, 15], // Showing 2024 dip
+                globalDairy: [18, 19, 20, 21, 22.4, 24, 28, 32],
+                usDairy: [2.9, 2.95, 2.9, 2.85, 2.8, 3.0, 4.5, 5.5], // Showing 2024 dip
+                usYogurt: [0.5, 0.6, 0.7, 0.82, 0.83, 0.95, 1.4, 1.8], // Showing slight 2024 increase
+            },
+            // Consumer Demographics (Adjusted to sum close to 100% or reflect household penetration)
+            consumerSegments: {
+                labels: ['Plant-Curious (Consume PB Foods)', 'Flexitarians', 'Vegetarians', 'Dedicated Vegans'],
+                percentages: [59, 11, 4, 2] // Based on U.S. household penetration and segment sizes
+            },
+            motivations: {
+                labels: ['Health Benefits', 'Environmental Concerns', 'Animal Welfare', 'Taste/Novelty'],
+                percentages: [45, 30, 15, 10] // Synthetic distribution aligned with report
+            },
+            preferredProteinSources: {
+                labels: ['Nuts & Seeds', 'Whole Grains', 'Legumes', 'Soy Protein', 'Pea Protein', 'Fava Bean', 'Sunflower Protein'],
+                data: [77, 62, 57, 42, 41, 15, 10] // % who consume/interested
+            },
+            productAttributes: {
+                labels: ['Taste & Texture', 'Nutritional Value', 'Clean Label/Minimal Ingredients', 'Price Competitiveness', 'Sustainability Claims'],
+                data: [90, 80, 75, 70, 50] // Synthetic importance ranking
+            },
+            willingnessToPay: {
+                productTypes: ['PB Milk (Premium)', 'PB Meat (High Premium)', 'PB Yogurt (Competitive)', 'PB Snack (Value)'],
+                priceIndex: [1.35, 1.45, 1.18, 1.05], // Relative price premium (1.0 = conventional price)
+                willingnessScore: [70, 40, 65, 80], // Lower for meat due to resistance to premium, higher for milk/yogurt/snacks
+                // Consumer base size/market penetration, used for bubble radius (scaled for visibility)
+                consumerBaseSize: [40, 13, 8, 25] // Example: US household penetration % (PB Milk 40%, PB Meat 13%, PB Yogurt 8% (extrapolated), PB Snack ~25%)
+            },
+            competitiveMarketShare: {
+                labels: ['Beyond Meat', 'Impossible Foods', 'Oatly', 'MorningStar Farms', 'Gardein', 'Others'],
+                data: [20, 18, 15, 12, 10, 25] // Synthetic, broad estimates for illustration
+            },
+            distributionChannels: {
+                labels: ['Conventional Grocery', 'Online E-commerce', 'Foodservice/Restaurants', 'Natural/Specialty Stores', 'D2C'],
+                data: [53.4, 18, 15, 10, 3.6] // Sums to 100
+            },
+            emergingCategoriesInnovation: {
+                'Plant-Based Seafood': 25,
+                'Cultivated Meat': 20,
+                'Fermented Alt-Dairy': 30,
+                'Hybrid Products': 25
+            },
+            competitiveRadar: {
+                attributes: ['Taste', 'Texture', 'Price Competitiveness', 'Innovation', 'Sustainability', 'Brand Recognition'],
+                brands: [
+                    { name: 'Beyond Meat', scores: [7, 6, 4, 8, 8, 9] },
+                    { name: 'Impossible Foods', scores: [8, 7, 5, 9, 8, 9] },
+                    { name: 'Oatly', scores: [9, 9, 6, 7, 9, 9] },
+                    { name: 'MorningStar Farms', scores: [6, 6, 7, 5, 6, 8] }
+                ]
+            }
+        };
+
+        // Function to generate a random color for charts
+        function getRandomColor(alpha = 1) {
+            const r = Math.floor(Math.random() * 255);
+            const g = Math.floor(Math.random() * 255);
+            const b = Math.floor(Math.random() * 255);
+            return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+        }
+
+        // Function to create an array of colors
+        function generateColors(count, alpha = 1) {
+            const colors = [
+                'rgba(76, 175, 80, ' + alpha + ')',   // Green
+                'rgba(255, 193, 7, ' + alpha + ')',   // Amber
+                'rgba(33, 150, 243, ' + alpha + ')',  // Blue
+                'rgba(156, 39, 176, ' + alpha + ')',  // Purple
+                'rgba(244, 67, 54, ' + alpha + ')',   // Red
+                'rgba(0, 188, 212, ' + alpha + ')',   // Cyan
+                'rgba(255, 87, 34, ' + alpha + ')',   // Deep Orange
+                'rgba(139, 195, 74, ' + alpha + ')',  // Light Green
+                'rgba(121, 85, 72, ' + alpha + ')',   // Brown
+                'rgba(96, 125, 139, ' + alpha + ')'   // Blue Gray
+            ];
+            return colors.slice(0, count);
+        }
+
+        // --- Chart Initialization Functions ---
+
+        // Line Graph: Market Size & Growth Trajectory
+        function createMarketGrowthLineChart() {
+            const ctx = document.getElementById('marketGrowthLineChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: syntheticData.marketGrowth.years,
+                    datasets: [
+                        {
+                            label: 'Global Overall Market (USD Bn)',
+                            data: syntheticData.marketGrowth.globalOverall,
+                            borderColor: 'rgb(75, 192, 192)',
+                            tension: 0.1,
+                            fill: false
+                        },
+                        {
+                            label: 'U.S. Overall Market (USD Bn)',
+                            data: syntheticData.marketGrowth.usOverall,
+                            borderColor: 'rgb(255, 99, 132)',
+                            tension: 0.1,
+                            fill: false
+                        },
+                        {
+                            label: 'U.S. Plant-Based Meat (USD Bn)',
+                            data: syntheticData.marketGrowth.usMeat,
+                            borderColor: 'rgb(54, 162, 235)',
+                            tension: 0.1,
+                            fill: false
+                        },
+                        {
+                            label: 'U.S. Plant-Based Dairy (USD Bn)',
+                            data: syntheticData.marketGrowth.usDairy,
+                            borderColor: 'rgb(255, 205, 86)',
+                            tension: 0.1,
+                            fill: false
+                        },
+                        {
+                            label: 'U.S. Plant-Based Yogurt (USD Bn)',
+                            data: syntheticData.marketGrowth.usYogurt,
+                            borderColor: 'rgb(153, 102, 255)',
+                            tension: 0.1,
+                            fill: false
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Global & U.S. Plant-Based Food Market Growth',
+                            font: { size: 16 }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Market Size (USD Billions)'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Year'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Stacked Area Chart: U.S. Plant-Based Market Growth by Sub-Category
+        function createMarketGrowthStackedAreaChart() {
+            const ctx = document.getElementById('marketGrowthStackedAreaChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: syntheticData.marketGrowth.years,
+                    datasets: [
+                        {
+                            label: 'U.S. Plant-Based Dairy',
+                            data: syntheticData.marketGrowth.usDairy,
+                            backgroundColor: 'rgba(255, 205, 86, 0.5)',
+                            borderColor: 'rgb(255, 205, 86)',
+                            fill: true
+                        },
+                        {
+                            label: 'U.S. Plant-Based Meat',
+                            data: syntheticData.marketGrowth.usMeat,
+                            backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                            borderColor: 'rgb(54, 162, 235)',
+                            fill: true
+                        },
+                        {
+                            label: 'U.S. Plant-Based Yogurt',
+                            data: syntheticData.marketGrowth.usYogurt,
+                            backgroundColor: 'rgba(153, 102, 255, 0.5)',
+                            borderColor: 'rgb(153, 102, 255)',
+                            fill: true
+                        }
+                        // For simplicity, total U.S. market is not layered here, but individual categories
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'U.S. Plant-Based Market Growth by Sub-Category',
+                            font: { size: 16 }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            stacked: true,
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Market Size (USD Billions)'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Year'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Doughnut Chart: Consumer Segments
+        function createConsumerSegmentsDoughnutChart() {
+            const ctx = document.getElementById('consumerSegmentsDoughnutChart').getContext('2d');
+            const colors = generateColors(syntheticData.consumerSegments.labels.length);
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: syntheticData.consumerSegments.labels,
+                    datasets: [{
+                        data: syntheticData.consumerSegments.percentages,
+                        backgroundColor: colors,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'U.S. Plant-Based Consumer Segments',
+                            font: { size: 16 }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed !== null) {
+                                        label += context.parsed + '%';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Doughnut Chart: Motivations
+        function createMotivationsDoughnutChart() {
+            const ctx = document.getElementById('motivationsDoughnutChart').getContext('2d');
+            const colors = generateColors(syntheticData.motivations.labels.length);
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: syntheticData.motivations.labels,
+                    datasets: [{
+                        data: syntheticData.motivations.percentages,
+                        backgroundColor: colors,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Primary Motivations for Consuming Plant-Based Foods',
+                            font: { size: 16 }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed !== null) {
+                                        label += context.parsed + '%';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Bar Chart: Preferred Protein Sources
+        function createProteinSourcesBarChart() {
+            const ctx = document.getElementById('proteinSourcesBarChart').getContext('2d');
+            const colors = generateColors(syntheticData.preferredProteinSources.labels.length);
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: syntheticData.preferredProteinSources.labels,
+                    datasets: [{
+                        label: '% of Consumers',
+                        data: syntheticData.preferredProteinSources.data,
+                        backgroundColor: colors,
+                        borderColor: colors.map(c => c.replace('0.7', '1')),
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Preferred Plant-Based Protein Sources (U.S.)',
+                            font: { size: 16 }
+                        },
+                        legend: {
+                            display: false // No need for legend if only one dataset
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Percentage of Consumers/Interest'
+                            }
+                        },
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Protein Source'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Bar Chart: Key Product Attributes
+        function createProductAttributesBarChart() {
+            const ctx = document.getElementById('productAttributesBarChart').getContext('2d');
+            const colors = generateColors(syntheticData.productAttributes.labels.length);
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: syntheticData.productAttributes.labels,
+                    datasets: [{
+                        label: 'Importance Score (1-100)',
+                        data: syntheticData.productAttributes.data,
+                        backgroundColor: colors,
+                        borderColor: colors.map(c => c.replace('0.7', '1')),
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    indexAxis: 'y', // Horizontal bars
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Key Product Attributes Consumers Prioritize',
+                            font: { size: 16 }
+                        },
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            max: 100,
+                            title: {
+                                display: true,
+                                text: 'Importance Score'
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Attribute'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Bubble Chart: Willingness to Pay vs. Price Premium & Consumer Base Size
+        function createWillingnessToPayScatterPlot() {
+            const ctx = document.getElementById('willingnessToPayScatterPlot').getContext('2d');
+            const dataPoints = syntheticData.willingnessToPay.productTypes.map((type, i) => ({
+                x: syntheticData.willingnessToPay.priceIndex[i],
+                y: syntheticData.willingnessToPay.willingnessScore[i],
+                r: syntheticData.willingnessToPay.consumerBaseSize[i] * 0.8, // Scale radius for better visibility
+                label: type // Store label directly in data point for easy access
+            }));
+            const colors = generateColors(dataPoints.length);
+
+            new Chart(ctx, {
+                type: 'bubble', // Changed to bubble chart
+                data: {
+                    datasets: [{
+                        label: 'Product Types',
+                        data: dataPoints,
+                        backgroundColor: colors,
+                        borderColor: colors.map(c => c.replace('0.7', '1')),
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Consumer Willingness to Pay vs. Price Premium & Consumer Base',
+                            font: { size: 16 }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const point = context.raw; // Access raw data point
+                                    return `${point.label}: Price Index ${point.x.toFixed(2)}, Willingness ${point.y}%, Consumer Base ${ (point.r / 0.8).toFixed(1) }%`;
+                                }
+                            }
+                        },
+                        legend: {
+                            display: true,
+                            labels: {
+                                generateLabels: function(chart) {
+                                    const data = chart.data.datasets[0].data;
+                                    const backgroundColors = chart.data.datasets[0].backgroundColor;
+                                    return data.map((point, i) => ({
+                                        text: point.label, // Use the label from the dataPoint
+                                        fillStyle: backgroundColors[i],
+                                        strokeStyle: chart.data.datasets[0].borderColor[i],
+                                        lineWidth: chart.data.datasets[0].borderWidth,
+                                        pointStyle: 'circle', // Show as a circle in the legend
+                                        hidden: !chart.isDatasetVisible(0) || chart.is
+                                    }));
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Relative Price (Conventional = 1.0)'
+                            },
+                            min: 1.0
+                        },
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Willingness to Pay (0-100%)'
+                            },
+                            max: 100
+                        }
+                    }
+                }
+            });
+        }
+
+        // Bar Chart: Competitive Market Share
+        function createMarketShareBarChart() {
+            const ctx = document.getElementById('marketShareBarChart').getContext('2d');
+            const colors = generateColors(syntheticData.competitiveMarketShare.labels.length);
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: syntheticData.competitiveMarketShare.labels,
+                    datasets: [{
+                        label: 'Estimated Market Share (%)',
+                        data: syntheticData.competitiveMarketShare.data,
+                        backgroundColor: colors,
+                        borderColor: colors.map(c => c.replace('0.7', '1')),
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Illustrative Plant-Based Market Share (U.S.)',
+                            font: { size: 16 }
+                        },
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 30, // Max for share
+                            title: {
+                                display: true,
+                                text: 'Market Share (%)'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Bar Chart: Pricing Comparison
+        function createPricingComparisonBarChart() {
+            const ctx = document.getElementById('pricingComparisonBarChart').getContext('2d');
+            const colors = generateColors(syntheticData.willingnessToPay.productTypes.length + 3); // More colors for conventional
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: syntheticData.willingnessToPay.productTypes.concat(['Conventional Burger', 'Conventional Milk', 'Conventional Yogurt']),
+                    datasets: [{
+                        label: 'Relative Price Index (Conventional = 1.0)',
+                        data: syntheticData.willingnessToPay.priceIndex.concat([1.0, 1.0, 1.0]),
+                        backgroundColor: [
+                            colors[0], colors[1], colors[2], colors[3], // Plant-based
+                            'rgba(180, 180, 180, 0.7)', // Conventional Burger
+                            'rgba(180, 180, 180, 0.7)', // Conventional Milk
+                            'rgba(180, 180, 180, 0.7)'  // Conventional Yogurt
+                        ],
+                        borderColor: [
+                            colors[0].replace('0.7', '1'), colors[1].replace('0.7', '1'), colors[2].replace('0.7', '1'), colors[3].replace('0.7', '1'),
+                            'rgba(180, 180, 180, 1)',
+                            'rgba(180, 180, 180, 1)',
+                            'rgba(180, 180, 180, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Comparative Pricing: Plant-Based vs. Conventional',
+                            font: { size: 16 }
+                        },
+                        legend: {
+                            display: false
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Relative Price Index'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Stacked Bar Chart: Distribution Channels
+        function createDistributionStackedBarChart() {
+            const ctx = document.getElementById('distributionStackedBarChart').getContext('2d');
+            const labels = syntheticData.distributionChannels.labels;
+            const data = syntheticData.distributionChannels.data;
+            const colors = generateColors(labels.length);
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['U.S. Plant-Based Food Sales'], // Single bar for overall distribution
+                    datasets: labels.map((label, index) => ({
+                        label: label,
+                        data: [data[index]], // Data for the single bar
+                        backgroundColor: colors[index],
+                        borderColor: colors[index].replace('0.7', '1'),
+                        borderWidth: 1
+                    }))
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'U.S. Plant-Based Food Sales Distribution by Channel (2023-2024)',
+                            font: { size: 16 }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.y !== null) {
+                                        label += context.parsed.y + '%';
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            stacked: true,
+                        },
+                        y: {
+                            stacked: true,
+                            beginAtZero: true,
+                            max: 100,
+                            title: {
+                                display: true,
+                                text: 'Percentage of Sales'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        // Waffle Chart: Emerging Categories Innovation Focus
+        function createWaffleChart() {
+            const container = document.getElementById('waffleChartContainer');
+            const data = syntheticData.emergingCategoriesInnovation;
+            const totalSquares = 100; // 10x10 grid
+
+            let currentSquare = 0;
+            let colorIndex = 0;
+            const categoryColors = {
+                'Plant-Based Seafood': 'waffle-color-1',
+                'Cultivated Meat': 'waffle-color-2',
+                'Fermented Alt-Dairy': 'waffle-color-3',
+                'Hybrid Products': 'waffle-color-4'
+            };
+
+            for (const category in data) {
+                const percentage = data[category];
+                const numSquares = Math.round((percentage / 100) * totalSquares);
+                const colorClass = categoryColors[category];
+
+                for (let i = 0; i < numSquares; i++) {
+                    const square = document.createElement('div');
+                    square.className = `waffle-square ${colorClass}`;
+                    container.appendChild(square);
+                    currentSquare++;
+                }
+            }
+
+            // Fill remaining squares with default color
+            while (currentSquare < totalSquares) {
+                const square = document.createElement('div');
+                square.className = 'waffle-square';
+                container.appendChild(square);
+                currentSquare++;
+            }
+        }
+
+        // Radar Chart: Competitive Positioning
+        function createCompetitiveRadarChart() {
+            const ctx = document.getElementById('competitiveRadarChart').getContext('2d');
+            const colors = generateColors(syntheticData.competitiveRadar.brands.length);
+
+            const datasets = syntheticData.competitiveRadar.brands.map((brand, index) => ({
+                label: brand.name,
+                data: brand.scores,
+                backgroundColor: colors[index].replace('1)', '0.2)'), // Light fill
+                borderColor: colors[index],
+                pointBackgroundColor: colors[index],
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: colors[index],
+                borderWidth: 2
+            }));
+
+            new Chart(ctx, {
+                type: 'radar',
+                data: {
+                    labels: syntheticData.competitiveRadar.attributes,
+                    datasets: datasets
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Competitive Positioning (Illustrative Scores 1-10)',
+                            font: { size: 16 }
+                        }
+                    },
+                    scales: {
+                        r: {
+                            angleLines: {
+                                display: false
+                            },
+                            suggestedMin: 0,
+                            suggestedMax: 10,
+                            pointLabels: {
+                                font: {
+                                    size: 12
+                                }
+                            },
+                            ticks: {
+                                display: false // Hide numerical ticks on the axis
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+
+        // Run all chart creation functions on window load
+        window.onload = function() {
+            createMarketGrowthLineChart();
+            createMarketGrowthStackedAreaChart();
+            createConsumerSegmentsDoughnutChart();
+            createMotivationsDoughnutChart();
+            createProteinSourcesBarChart();
+            createProductAttributesBarChart();
+            createWillingnessToPayScatterPlot();
+            createMarketShareBarChart();
+            createPricingComparisonBarChart();
+            createDistributionStackedBarChart();
+            createWaffleChart(); // Custom waffle chart
+            createCompetitiveRadarChart();
+        };
+    </script>
+</body>
+</html>
